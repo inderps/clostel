@@ -1,0 +1,1 @@
+$(document).ready(function(){function e(){{var e=new google.maps.LatLng(52.4965481,13.4380442),a=document.getElementById("map-canvas"),o={center:e,zoom:14,mapTypeId:google.maps.MapTypeId.ROADMAP},n=new google.maps.Map(a,o);new google.maps.Marker({position:e,map:n,title:"Hannah & Cash"})}}$("body").backstretch("images/bg.jpg"),google.maps.event.addDomListener(window,"load",e)});
