@@ -87,6 +87,17 @@ h2, h3, h4, h5 {
   background: #353535;
   padding-bottom: 50px;
   text-align: center;
+  form {
+    width: 50%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .form-group{
+    text-align: left;
+  }
   h1{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -123,7 +134,7 @@ h2, h3, h4, h5 {
 }
 .orange-btn:hover {
   background: transparent;
-  color: #fff;
+  color: #db522f;
   border: 2px solid #db522f;
 }
 
