@@ -83,6 +83,10 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('assets', () => {
+  return gulp.src('app/assets/**/*').pipe(gulp.dest('dist/assets'));
+});
+
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
@@ -161,7 +165,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'assets'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
