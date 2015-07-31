@@ -1,7 +1,4 @@
 $(document).ready(function(){
-  $('.main').backstretch('images/bg.jpg');
-  $('#glimpse').backstretch('images/glimpse.jpg');
-
 
   $.get("http://ipinfo.io", function(response) {
     $('#hidden_div').prepend("<img src='http://tunescart.com/clostel/visited?ip="+ response.ip + "' />");

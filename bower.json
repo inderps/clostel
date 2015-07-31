@@ -2,18 +2,7 @@
   "name": "clostel",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1",
-    "jquery-backstretch": "~2.0.4"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
+    "modernizr": "~2.8.1"
   },
   "devDependencies": {
     "chai": "~3.0.0",
