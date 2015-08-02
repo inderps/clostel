@@ -27,15 +27,20 @@ $(document).ready(function(){
 
   var signupVisible = false;
 
-  window.setInterval(function(){
-    if(!signupVisible){
+
+  var showSignup = function(){
+    if(!signupVisible && !showAlert()){
       $('#signupModal').modal('show');
       signupVisible = true;
     }
-  }, 12000);
+  };
+
+  var myTimer = window.setInterval(showSignup, 12000);
 
   $('#signupModal').on('hidden', function () {
     signupVisible= false;
+    clearInterval(myTimer);
+    myTimer = setInterval(showSignup, 12000);
   });
 
 
