@@ -47,7 +47,14 @@ $(document).ready(function(){
   $('a').click(function(ev){
     if($(ev.currentTarget).attr('href') == '#showPopup'){
       $('#signupModal').modal('show');
+      signupVisible = true;
     }
+  });
+
+  $('.book-btn').click(function(ev){
+    ev.preventDefault();
+    $('#signupModal').modal('show');
+    signupVisible = true;
   });
 
 });
