@@ -27,7 +27,7 @@ $(document).ready(function(){
 
   window.setInterval(function(){
     $('#signupModal').modal('show');
-  }, 10000);
+  }, 15000);
 
 
   $('a').click(function(ev){
