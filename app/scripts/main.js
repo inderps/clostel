@@ -24,4 +24,16 @@ $(document).ready(function(){
   if(showAlert()){
     $('#myModal').modal('show');
   }
+
+  window.setInterval(function(){
+    $('#signupModal').modal('show');
+  }, 10000);
+
+
+  $('a').click(function(ev){
+    if($(ev.currentTarget).attr('href') == '#showPopup'){
+      $('#signupModal').modal('show');
+    }
+  });
+
 });
