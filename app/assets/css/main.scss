@@ -1,0 +1,36 @@
+ul.admin {
+  li {
+    div.pull-left {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#signupModal {
+  width: inherit !important;
+
+  .form-area{
+    width: 50%;
+    form {
+      padding: 15px;
+
+      .btn-success {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .notes-area{
+    width: 50%;
+    ul{
+      margin-top: 20px;
+      li{
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.money{
+  color: red;
+}
