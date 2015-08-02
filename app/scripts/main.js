@@ -25,9 +25,18 @@ $(document).ready(function(){
     $('#myModal').modal('show');
   }
 
+  var signupVisible = false;
+
   window.setInterval(function(){
-    $('#signupModal').modal('show');
-  }, 10000);
+    if(!signupVisible){
+      $('#signupModal').modal('show');
+      signupVisible = true;
+    }
+  }, 12000);
+
+  $('#signupModal').on('hidden', function () {
+    signupVisible= false;
+  });
 
 
   $('a').click(function(ev){
