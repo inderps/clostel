@@ -35,12 +35,12 @@ $(document).ready(function(){
     }
   };
 
-  var myTimer = window.setInterval(showSignup, 12000);
+  var myTimer = window.setInterval(showSignup, 10000);
 
   $('#signupModal').on('hidden', function () {
     signupVisible= false;
     clearInterval(myTimer);
-    myTimer = setInterval(showSignup, 12000);
+    myTimer = setInterval(showSignup, 10000);
   });
 
 

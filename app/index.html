@@ -1266,37 +1266,16 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <div class="modal-body">
-        <h1 class="text-center">Only <span class="money">€10</span> per month</h1>
-        <h2 class="text-center">Request now to get 30 days <span class="money">FREE DEMO</span> access</h2>
-        <div class="pull-left form-area">
-          <form id="signup_form" method="post" action="http://tunescart.com/clostel/signup">
-            <div class="form-group">
-              <label for="entered_email">Email address</label>
-              <input type="email" class="form-control" id="entered_email" name="entered_email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <label for="hostel_name">Hostel Name</label>
-              <input type="text" class="form-control" id="hostel_name" name="hostel_name" placeholder="Hostel Name" required>
-            </div>
-            <div class="form-group">
-              <label for="city">City</label>
-              <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
-            </div>
-            <input type="hidden" id="ip" name="ip"/>
-            <button type="submit" class="btn btn-success">Request for demo</button>
-          </form>
-        </div>
-        <div class="pull-right notes-area">
-          <ul>
-            <li>Unlimited Bookings</li>
-            <li>No Setup or Installation Cost</li>
-            <li>Free Technical Support</li>
-            <li>Cancel subscription anytime</li>
-            <li>Full support in exporting existing data to app</li>
-            <li>Custom feature request will be accommodated</li>
-            <li>This is a discounted price and it is valid for first few customers. So Hurry up</li>
-          </ul>
-        </div>
+        <h1 class="text-center">Are you interested in trying this?</h1>
+        <h2 class="text-center">Request now to get <span class="money"> FREE 30 days DEMO</span> access</h2>
+        <form class="form-inline" method="post" action="http://tunescart.com/clostel/signup">
+          <input type="email" class="input-large" id="entered_email" name="entered_email" placeholder="Your Email Address" required>
+          <input type="hidden" id="ip" name="ip"/>
+          <input type="hidden" id="hostel_name" name="hostel_name" value="test"/>
+          <input type="hidden" id="city" name="city" value="test"/>
+          <button type="submit" class="btn btn-large btn-success">Request for Demo</button>
+        </form>
+        <h5 class="text-center">After demo period, If you are interested to use this, It will cost you only <span class="money">€10 per month.</span></h5>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Later</button>
