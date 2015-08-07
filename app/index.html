@@ -31,7 +31,6 @@
   <script src="assets/js/jquery.sparkline.js"></script>
   <script src="assets/js/charts.js"></script>
   <script src="assets/js/date.js"></script>
-  <script src="assets/js/daterangepicker.js"></script>
   <!-- end: JS -->
 
   <!-- Le fav and touch icons -->
@@ -305,50 +304,6 @@
             <i class="icon-calendar"></i>
             <span></span> <b class="caret"></b>
           </div>
-
-          <script type="text/javascript">
-            //Datepicker
-            $(document).ready(function() {
-              $('#reportrange').daterangepicker(
-                {
-                  ranges: {
-                    'Today': ['today', 'today'],
-                    'Yesterday': ['yesterday', 'yesterday'],
-                    'Last 7 Days': [Date.today().add({ days: -6 }), 'today'],
-                    'Last 30 Days': [Date.today().add({ days: -29 }), 'today'],
-                    'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
-                    'Last Month': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
-                  },
-                  opens: 'left',
-                  format: 'MM/dd/yyyy',
-                  separator: ' to ',
-                  startDate: Date.today().add({ days: -29 }),
-                  endDate: Date.today(),
-                  minDate: '01/01/2012',
-                  maxDate: '12/31/2013',
-                  locale: {
-                    applyLabel: 'Submit',
-                    fromLabel: 'From',
-                    toLabel: 'To',
-                    customRangeLabel: 'Custom Range',
-                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                    firstDay: 1
-                  },
-                  showWeekNumbers: true,
-                  buttonClasses: ['notify'],
-                  dateLimit: false
-                },
-                function(start, end) {
-                  $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
-                }
-              );
-
-              //Set the initial state of the picker label
-              $('#reportrange span').html(Date.today().add({ days: -29 }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
-
-            });
-          </script>
 
         </div>
       </li>
@@ -1256,7 +1211,7 @@
   </div>
 </footer><!-- footer -->
 
-<div id="hidden_div"></div>
+<div id="hidden_div" style="display: none"></div>
 
 <!-- Modal -->
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel">
@@ -1305,12 +1260,7 @@
 <script src="assets/js/scrooly.js"></script>
 <script src="assets/js/responsive-tables.js"></script>
 <script src="assets/js/jquery-ui-1.10.2.custom.min.js"></script>
-<script src="assets/lib/fullcalendar/fullcalendar.min.js"></script>
-<script src="assets/lib/jasny/bootstrap-fileupload.js"></script>
-<script src="assets/js/wysihtml5-0.3.0.js "></script>
-<script src="assets/js/bootstrap-wysihtml5.js "></script>
 <script src="assets/js/prettyprint.js"></script>
-<script src="assets/js/jquery.spellchecker.js "></script>
 <script src="assets/js/parsley.js"></script>
 <script src="assets/js/jquery.masonry.min.js"></script>
 <script src="assets/js/jquery.knob.js"></script>
@@ -1586,61 +1536,6 @@
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-
-    $('#calendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay'
-      },
-      editable: true,
-      events: [
-        {
-          title: 'All Day Event',
-          start: new Date(y, m, 1)
-        },
-        {
-          title: 'Long Event',
-          start: new Date(y, m, d-5),
-          end: new Date(y, m, d-2)
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: new Date(y, m, d-3, 16, 0),
-          allDay: false
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: new Date(y, m, d+4, 16, 0),
-          allDay: false
-        },
-        {
-          title: 'Meeting',
-          start: new Date(y, m, d, 10, 30),
-          allDay: false
-        },
-        {
-          title: 'Lunch',
-          start: new Date(y, m, d, 12, 0),
-          end: new Date(y, m, d, 14, 0),
-          allDay: false
-        },
-        {
-          title: 'Birthday Party',
-          start: new Date(y, m, d+1, 19, 0),
-          end: new Date(y, m, d+1, 22, 30),
-          allDay: false
-        },
-        {
-          title: 'Click for Google',
-          start: new Date(y, m, 28),
-          end: new Date(y, m, 29),
-          url: 'http://google.com/'
-        }
-      ]
-    });
 
   });
 </script><!-- script -->
